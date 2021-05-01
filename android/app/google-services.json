@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "184258165127",
+    "project_id": "mobilshop-889a7",
+    "storage_bucket": "mobilshop-889a7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:184258165127:android:865e85372bda43f2473b22",
+        "android_client_info": {
+          "package_name": "mobilshop.flutter_mobilshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "184258165127-cbpkj1jp3r0ps1v7dabd4oisd7drfqi8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYIizbBI5GkjDPgbkDlyMc4h2R6WpY2zY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "184258165127-cbpkj1jp3r0ps1v7dabd4oisd7drfqi8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

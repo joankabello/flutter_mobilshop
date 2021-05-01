@@ -19,7 +19,10 @@ Widget homeListener() {
     child: BlocBuilder<HomeBloc, HomeState>(
       buildWhen: (previous, current) => current is HomeBuilderState,
       builder: (context, state) {
-        return HomeBuilder();
+        if (state is HomeLoaded) {
+          return HomeBuilder(shopItemList: state.shopItemList);
+        }
+        return Center(child: CircularProgressIndicator());
       },
     ),
   );
