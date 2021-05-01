@@ -28,6 +28,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   }
 
   Stream<HomeState> _mapHomeLoadedToState(OnHomeLoaded event) async* {
+    
     final shopItemList = await _shopService.getShopItems();
 
     yield HomeLoaded(shopItemList);
@@ -36,6 +37,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   Stream<HomeState> _mapAddItem(OnAddItem event) async* {
     if (event.itemName.isNotEmpty) {
       await _shopService.addShopItem(event.itemName);
+      yield ItemAddedSuccess("Item added successfully");
       add(OnHomeLoaded());
     }
     else {
@@ -45,10 +47,12 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
   Stream<HomeState> _mapDeleteItem(OnDeleteItem event) async* {
     await _shopService.deleteShopItem(event.shopItem);
+    yield ShopItemDeletedSuccess("Shop Item deleted successfully");
     add(OnHomeLoaded());
   }
 
   Stream<HomeState> _mapUpdateShopItem(OnUpdateShopItem event) async* {
     await _shopService.updateShopItem(event.shopItem);
+    yield ItemUpdatedSuccess();
   }
 }

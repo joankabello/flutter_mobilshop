@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_mobilshop/models/shop.dart';
@@ -17,6 +16,11 @@ class HomeBuilder extends StatefulWidget {
 class _HomeStateBuilder extends State<HomeBuilder> {
   @override
   Widget build(BuildContext context) {
+    if (widget.shopItemList.isEmpty) {
+      return Center(
+        child: Text("Shopping List is empty!"),
+      );
+    }
     return Container(
       height: MediaQuery.of(context).size.height,
       child: ListView.builder(

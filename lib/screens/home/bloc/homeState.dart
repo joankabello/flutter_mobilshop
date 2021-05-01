@@ -29,3 +29,23 @@ class HomeLoadedFailure extends HomeState {
   @override
   List<Object> get props => [error];
 }
+
+class ShopItemDeletedSuccess extends HomeState {
+  final String successMessage;
+
+  ShopItemDeletedSuccess(this.successMessage);
+
+  @override
+  List<Object> get props => [successMessage];
+}
+
+class ItemAddedSuccess extends HomeState {
+  final String successMessage;
+
+  ItemAddedSuccess(this.successMessage);
+
+  @override
+  List<Object> get props => [successMessage];
+}
+
+class ItemUpdatedSuccess extends HomeState {}

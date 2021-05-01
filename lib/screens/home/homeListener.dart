@@ -13,6 +13,12 @@ Widget homeListener() {
           if (state is HomeLoadedFailure) {
             return snackBarWidget(context, state.error, Colors.red);
           }
+          if (state is ItemAddedSuccess) {
+            return snackBarWidget(context, state.successMessage, Colors.green);
+          }
+          if (state is ShopItemDeletedSuccess) {
+            return snackBarWidget(context, state.successMessage, Colors.green);
+          }
         },
       ),
     ],

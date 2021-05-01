@@ -6,7 +6,7 @@ import 'package:flutter_mobilshop/screens/home/homeListener.dart';
 import 'package:flutter_mobilshop/widgets/textAlertDialog.dart';
 
 class HomeScreen extends StatelessWidget {
-  TextEditingController descriptionController = TextEditingController();
+  final TextEditingController descriptionController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {

@@ -7,7 +7,6 @@ class ShopService {
 
   Future<List<ShopItem>> getShopItems() async {
     final shopItemsList = await shopCollection.get();
-
     return ShopItem.fromList(shopItemsList.docs);
   }
 
